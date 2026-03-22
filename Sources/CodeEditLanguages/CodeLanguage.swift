@@ -8,7 +8,45 @@
 import Foundation
 import TreeSitter
 import SwiftTreeSitter
-import CodeLanguages_Container
+import TreeSitterAgda
+import TreeSitterBash
+import TreeSitterC
+import TreeSitterCPP
+import TreeSitterCSharp
+import TreeSitterCSS
+import TreeSitterDart
+import TreeSitterDockerfile
+import TreeSitterElixir
+import TreeSitterGeneric
+import TreeSitterGo
+import TreeSitterGoMod
+import TreeSitterHaskell
+import TreeSitterHTML
+import TreeSitterJava
+import TreeSitterJS
+import TreeSitterJSDoc
+import TreeSitterJSON
+import TreeSitterJulia
+import TreeSitterKotlin
+import TreeSitterLua
+import TreeSitterMarkdown
+import TreeSitterMarkdownInline
+import TreeSitterObjc
+import TreeSitterOCaml
+import TreeSitterPerl
+import TreeSitterPHP
+import TreeSitterPython
+import TreeSitterRegex
+import TreeSitterRuby
+import TreeSitterRust
+import TreeSitterScala
+import TreeSitterSQL
+import TreeSitterSwift
+import TreeSitterTOML
+import TreeSitterTypeScript
+import TreeSitterVerilog
+import TreeSitterYAML
+import TreeSitterZig
 import RegexBuilder
 
 /// A structure holding metadata for code languages
@@ -81,7 +119,7 @@ public struct CodeLanguage {
 
     internal func queryURL(for highlights: String = "highlights") -> URL? {
         return resourceURL?
-            .appendingPathComponent("Resources/tree-sitter-\(tsName)/\(highlights).scm")
+            .appendingPathComponent("tree-sitter-\(tsName)/\(highlights).scm")
     }
 
     /// Gets the TSLanguage from `tree-sitter`
